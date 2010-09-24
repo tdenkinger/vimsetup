@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/tdenkinger/projects/masterworks/app'
+let g:netrw_dirhist_2='/Users/tdenkinger/projects/masterworks/app/controllers'
+let g:netrw_dirhist_3='/Users/tdenkinger/projects/publishing/lib'
