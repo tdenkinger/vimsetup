@@ -78,7 +78,7 @@ map <leader>tm :tabmove
 map <leader>nt :NERDTreeToggle<CR>
 imap jj <Esc>
 let g:bufExplorerShowRelativePath=1
-set backupdir = ~/.vim/backup//
-set directory = ~/.vim/swp//
+set backupdir=~/.vim/backups//
+set directory=~/.vim/swp//
 
 
