@@ -72,12 +72,11 @@ map <leader>tm :tabmove
 "vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal foldmethod=syntax
+autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 map <leader>nt :NERDTreeToggle<CR>
 imap jj <Esc>
 let g:bufExplorerShowRelativePath=1
 set backupdir=~/.vim/backups//
-
 
