@@ -66,19 +66,21 @@ map <leader>tm :tabmove
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
+map <leader>nt :NERDTreeToggle<CR>
 
-"vnoremap ; :
-"vnoremap : ;
+" Controversial...swap colon and semicolon for easier commands
+""nnoremap ; :
+""nnoremap : ;
+""vnoremap ; :
+""vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
 " "autocmd FileType ruby setlocal foldmethod=syntax
 " "autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
-map <leader>nt :NERDTreeToggle<CR>
 imap jj <Esc>
 let g:bufExplorerShowRelativePath=1
 set backupdir=~/.vim/backups//
+
+map <leader>h :cd ~/projects<CR>
 
