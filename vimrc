@@ -64,7 +64,7 @@ colorscheme topfunky-light
 ""map <leader>tm :tabmove
 
 " Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
+""map <Leader>t :FuzzyFinderTextMate<Enter>
 
 map <leader>nt :NERDTreeToggle<CR>
 
