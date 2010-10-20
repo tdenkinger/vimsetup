@@ -86,6 +86,9 @@ map <leader>h :cd ~/projects<CR>
 
 cd /Users/tdenkinger/projects
 
+" enables copy/cut into the OSX system clipboard with normal vim commands
+set clipboard=unnamed
+
 function! DoPrettyXML()
   " save the filetype so we can restore it later
   let l:origft = &ft
