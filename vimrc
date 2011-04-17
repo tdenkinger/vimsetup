@@ -4,8 +4,10 @@
 set nocompatible                  " Must come first because it changes other options.
 
 silent! call pathogen#runtime_append_all_bundles()
+silent! call pathogen#helptags()
 
 syntax enable                     " Turn on syntax highlighting.
+
 filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
@@ -29,7 +31,7 @@ set ruler                         " Show cursor position.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
-set wrap                          " Turn on line wrapping.
+set nowrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
@@ -49,45 +51,37 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Or use vividchalk
-colorscheme topfunky-light
-
-" Tab mappings.
-""map <leader>tt :tabnew<cr>
-""map <leader>te :tabedit
-""map <leader>tc :tabclose<cr>
-""map <leader>to :tabonly<cr>
-""map <leader>tn :tabnext<cr>
-""map <leader>tp :tabprevious<cr>
-""map <leader>tf :tabfirst<cr>
-""map <leader>tl :tablast<cr>
-""map <leader>tm :tabmove
-
-" Uncomment to use Jamis Buck's file opening plugin
-""map <Leader>t :FuzzyFinderTextMate<Enter>
-
-map <leader>nt :NERDTreeToggle<CR>
-
-" Controversial...swap colon and semicolon for easier commands
-""nnoremap ; :
-""nnoremap : ;
-""vnoremap ; :
-""vnoremap : ;
-
-" Automatic fold settings for specific files. Uncomment to use.
-" "autocmd FileType ruby setlocal foldmethod=syntax
-" "autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+set background=dark
+colorscheme solarized
 
 imap jj <Esc>
+imap <C-j> <Esc>
 let g:bufExplorerShowRelativePath=1
 set backupdir=~/.vim/backups//
 
-map <leader>h :cd ~/projects<CR>
+" Quick keys for taglist, nerdtree and lustyexplorer
+map <C-l> :TlistToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
+map <C-f> :LustyFilesystemExplorerFromHere<CR>
+map <C-n> :noh<CR>
 
-cd /Users/tdenkinger/projects
+cd /Users/tdenkin/projects
 
 " enables copy/cut into the OSX system clipboard with normal vim commands
 set clipboard=unnamed
+
+"code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
+" Configuraton for the taglist window
+let Tlist_Use_Right_Window=1
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Compact_Format=1
+let Tlist_GainFocus_On_ToggleOpen=1
 
 function! DoPrettyXML()
   " save the filetype so we can restore it later

@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/tdenkinger/projects/masterworks/app'
 let g:netrw_dirhist_2='/Users/tdenkinger/projects/masterworks/app/controllers'
 let g:netrw_dirhist_3='/Users/tdenkinger/projects/publishing/lib'
+let g:netrw_dirhist_4='/Users/tdenkin/projects/data_incoming/emi/myplay_Audio_20101120000000_XML/5099926813257'
+let g:netrw_dirhist_5='/Users/tdenkin/projects/maintenance/content_management'
