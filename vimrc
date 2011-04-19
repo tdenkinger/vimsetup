@@ -52,7 +52,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 set background=dark
-colorscheme solarized
+colorscheme railscasts 
 
 imap jj <Esc>
 imap <C-j> <Esc>
@@ -62,7 +62,7 @@ set backupdir=~/.vim/backups//
 " Quick keys for taglist, nerdtree and lustyexplorer
 map <C-l> :TlistToggle<CR>
 map <C-t> :NERDTreeToggle<CR>
-map <C-f> :LustyFilesystemExplorerFromHere<CR>
+"map <C-f> :LustyFilesystemExplorerFromHere<CR>
 map <C-n> :noh<CR>
 
 cd /Users/tdenkin/projects
