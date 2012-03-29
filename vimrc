@@ -12,6 +12,8 @@ filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
+set lines=90 columns=150
+
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -30,6 +32,8 @@ set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
+set ignorecase
+set smartcase
 
 set nowrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
@@ -51,7 +55,7 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-set background=dark
+set background=light
 colorscheme railscasts 
 
 imap jj <Esc>
@@ -62,13 +66,13 @@ set backupdir=~/.vim/backups//
 " Quick keys for taglist, nerdtree and lustyexplorer
 map <C-l> :TlistToggle<CR>
 map <C-t> :NERDTreeToggle<CR>
-"map <C-f> :LustyFilesystemExplorerFromHere<CR>
+map <C-f> :LustyFilesystemExplorerFromHere<CR>
 map <C-n> :noh<CR>
 
-cd /Users/tdenkin/projects
+" cd /Users/tdenkin/projects
 
 " enables copy/cut into the OSX system clipboard with normal vim commands
-set clipboard=unnamed
+" set clipboard=unnamed
 
 "code folding
 set foldmethod=indent
@@ -82,6 +86,10 @@ let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Compact_Format=1
 let Tlist_GainFocus_On_ToggleOpen=1
+
+" Clojure bits
+let vimclojure#HighlightBuiltins=1      " Highlight Clojure's builtins
+let vimclojure#ParenRainbow=1           " Rainbow parentheses'!
 
 function! DoPrettyXML()
   " save the filetype so we can restore it later
