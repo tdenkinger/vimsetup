@@ -1,1 +1,4 @@
 My vim config.
+
+I'm cargo culting Gary Bernhardts .vimrc pretty heavily. I made a couple of changes for my personal setup, but I need to back and remove stuff that's irrelevant to me still.
+
