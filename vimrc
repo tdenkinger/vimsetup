@@ -125,6 +125,7 @@ endfunction
 call MapCR()
 nnoremap <leader><leader> <c-^>
 
+map <leader>W :FixWhitespace<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
@@ -348,7 +349,7 @@ function! RunTests(filename)
     else
         if filereadable("script/test")
             exec ":!script/test " . a:filename
-        elseif filereadable(expand(%), '~/bin/test')
+        elseif filereadable('~/bin/test')
             exec ":!test " . a:filename
         elseif filereadable("Gemfile")
             exec ":!bundle exec rspec --color " . a:filename
